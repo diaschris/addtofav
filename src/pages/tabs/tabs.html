@@ -1,0 +1,6 @@
+<ion-tabs>
+    <ion-tab [root]="favoritesPage" tabTitle="Favorites" tabIcon="star"></ion-tab>
+    <ion-tab [root]="libraryPage" tabTitle="Library" tabIcon="book"></ion-tab>
+    
+    <ion-tab [root]="addtocartPage" tabTitle="cart" tabIcon="cart" [tabBadge]="fav.addtocart.length>0?fav.addtocart.length:null"></ion-tab>
+</ion-tabs>

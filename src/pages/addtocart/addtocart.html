@@ -1,0 +1,36 @@
+<!--
+  Generated template for the AddtocartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addtocart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding 
+        *ngFor="let quote of data">
+            <ion-item >
+                <h2>{{quote.person}}</h2>
+                <p>{{quote.text}}</p>
+                <button
+                    ion-button
+                    clear
+                    small
+                    color="danger"
+                   (click)="deletefromcart(quote.id)"
+                   >Delete</button>
+               
+            </ion-item>
+            
+        </ion-item-sliding>
+    </ion-list>
+
+</ion-content>
